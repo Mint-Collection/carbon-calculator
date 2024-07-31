@@ -1,0 +1,514 @@
+<div class="calc-frame">
+  <link rel="stylesheet" href="calc.css" />
+  <link
+    rel="stylesheet"
+    as="style"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+  />
+  <div class="calc-header-top">
+    <img src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/logo.png" />
+    <a href="https://careid2.framer.ai/" target="_blank"
+      >MORE ABOUT CAREID<img
+        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-dark.svg"
+    /></a>
+  </div>
+  <div class="calc-header-wrap">
+    <div class="calc-header-mid">
+      <div>Eco Balance Calculator</div>
+      <div id="prd-slash">/</div>
+      <div id="prd-name">{Project Name}</div>
+      <div id="prd-slash-category">/</div>
+      <div id="prd-category">{Product Category}</div>
+    </div>
+    <div class="calc-header-bottom">
+      2030 Calculator는 제조업체와 브랜드가 일반적으로 수명 주기 분석과 관련된
+      비용과 시간 집약적인 리소스를 필요로 하지 않고 직관적이고 신속한 방법으로
+      제품의 탄소 발자국을 계산할 수 있도록 설계된 도구입니다.
+    </div>
+  </div>
+
+  <div class="calc-body">
+    <div class="calc-step">
+      <div id="step-1">제품 이름</div>
+      <div id="step-2">카테고리 선택</div>
+      <div id="step-3">혼용률 기재</div>
+      <div id="step-4">결과</div>
+    </div>
+    <div class="calc-input-name" id="calc-input-name">
+      <div>
+        <div>
+          <div>제품명 또는 프로젝트명 입력해주세요.</div>
+          <div>Please wrtie your product or project name.</div>
+        </div>
+      </div>
+      <div class="input-name">
+        <input
+          type="text"
+          id="input-prd-name"
+          placeholder="ex) My Blue shirt"
+        />
+        <div id="require-prd-name">제품명을 입력하세요.</div>
+      </div>
+    </div>
+    <div class="calc-input-category" id="calc-input-category">
+      <div class="category-class">
+        <div class="class-item" id="outer">
+          <div>
+            <div class="class-item-name-kr">아우터</div>
+            <div class="class-item-name-en">Outer</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="top">
+          <div>
+            <div class="class-item-name-kr">상의</div>
+            <div class="class-item-name-en">Top</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="bottom">
+          <div>
+            <div class="class-item-name-kr">하의</div>
+            <div class="class-item-name-en">Bottom</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="womenclothes">
+          <div>
+            <div class="class-item-name-kr">여성 의류</div>
+            <div class="class-item-name-en">Skirt / One-piece</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="shoes">
+          <div>
+            <div class="class-item-name-kr">신발</div>
+            <div class="class-item-name-en">Shoes</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="underwear">
+          <div>
+            <div class="class-item-name-kr">속옷</div>
+            <div class="class-item-name-en">Under-wear</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="accessories">
+          <div>
+            <div class="class-item-name-kr">악세사리</div>
+            <div class="class-item-name-en">Accessories</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div class="class-item" id="etc">
+          <div>
+            <div class="class-item-name-kr">기타</div>
+            <div class="class-item-name-en">etc</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+      </div>
+      <div class="category-items">
+        <div class="class-name">아우터</div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="windbreaker"
+            name="category"
+            value="windbreaker"
+          />
+          <label for="windbreaker">바람막이</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="jacketfalls"
+            name="category"
+            value="jacketfalls"
+          />
+          <label for="jacketfalls">가을자켓</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="jacketwinter"
+            name="category"
+            value="jacketwinter"
+          />
+          <label for="jacketwinter">겨울자켓</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="coat" name="category" value="coat" />
+          <label for="coat">코트</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="coatfur" name="category" value="coatfur" />
+          <label for="coatfur">퍼 코트</label>
+        </div>
+        <div class="class-name">상의</div>
+        <div class="class-select">
+          <input type="radio" id="tshirt" name="category" value="tshirt" />
+          <label for="tshirt">티셔츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="shirt" name="category" value="shirt" />
+          <label for="shirt">셔츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sweather" name="category" value="sweather" />
+          <label for="sweather">스웨더</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="hoody" name="category" value="hoody" />
+          <label for="hoody">후디</label>
+        </div>
+        <div class="class-name">하의</div>
+        <div class="class-select">
+          <input type="radio" id="jeans" name="category" value="jeans" />
+          <label for="jeans">청바지</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="pants-long"
+            name="category"
+            value="pantslong"
+          />
+          <label for="pants-long">긴바지</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="pants-short"
+            name="category"
+            value="pantsshort"
+          />
+          <label for="pants-short">반바지</label>
+        </div>
+        <div class="class-name">여성 의류</div>
+        <div class="class-select">
+          <input type="radio" id="leggings" name="category" value="leggings" />
+          <label for="leggings">레깅스</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="dress" name="category" value="dress" />
+          <label for="dress">드레스</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="skirt" name="category" value="skirt" />
+          <label for="skirt">스커트</label>
+        </div>
+        <div class="class-name">신발</div>
+        <div class="class-select">
+          <input type="radio" id="slippers" name="category" value="slippers" />
+          <label for="slippers"> 슬리퍼</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sandal" name="category" value="sandal" />
+          <label for="sandal">샌들</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sneakers" name="category" value="sneakers" />
+          <label for="sneakers">운동화</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="shoes" name="category" value="shoes" />
+          <label for="shoes">구두</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="boots" name="category" value="boots" />
+          <label for="boots">부츠</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="bootslong"
+            name="category"
+            value="bootslong"
+          />
+          <label for="boots-long">롱부츠</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="bootsrubber"
+            name="category"
+            value="bootsrubber"
+          />
+          <label for="bootsrubber">고무 부츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="mule" name="category" value="mule" />
+          <label for="mule">뮬</label>
+        </div>
+        <div class="class-name">속옷</div>
+        <div class="class-select">
+          <input type="radio" id="panties" name="category" value="panties" />
+          <label for="panties">팬티</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="bra" name="category" value="bra" />
+          <label for="bra">브라</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="pajamas" name="category" value="pajamas" />
+          <label for="pajamas">파자마</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="socks" name="category" value="socks" />
+          <label for="socks">양말</label>
+        </div>
+        <div class="class-name">악세사리</div>
+        <div class="class-select">
+          <input type="radio" id="hat" name="category" value="hat" />
+          <label for="hat">모자</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="skarf" name="category" value="skarf" />
+          <label for="skarf">스카프</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="swimming" name="category" value="swimming" />
+          <label for="swimming">수영복</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="gloves" name="category" value="gloves" />
+          <label for="gloves">장갑</label>
+        </div>
+        <div class="class-name">기타</div>
+        <div class="class-select">
+          <input type="radio" id="etc" name="category" value="etc" />
+          <label for="etc">장갑</label>
+        </div>
+      </div>
+    </div>
+    <div class="calc-input-emission" id="calc-input-emission">
+      <div class="emission-item">
+        <select class="custom-dropdown">
+          <option value="" disabled selected>소재를 선택하세요.</option>
+          <option value="nylon">나일론</option>
+          <option value="polyester">폴리에스터</option>
+          <option value="leather">가죽</option>
+          <option value="wool">울</option>
+          <option value="cashmere">캐시미어</option>
+          <option value="fleece">플리스</option>
+          <option value="fur">퍼</option>
+          <option value="mohair">모헤어</option>
+          <option value="acrylic">아크릴</option>
+          <option value="poplin">포플린</option>
+          <option value="flax">린넨</option>
+          <option value="flannel">플란넬</option>
+          <option value="jersey">저지</option>
+          <option value="denim">데님</option>
+          <option value="jute">마</option>
+          <option value="rayon">네이온</option>
+          <option value="silk">실크</option>
+          <option value="spandex">스판덱스</option>
+          <option value="modal">모달</option>
+          <option value="viscose">비스코스</option>
+          <option value="plyurethane">폴리우레탄</option>
+          <option value="rubber">고무</option>
+          <option value="wood">나무</option>
+          <option value="plastic">플라스틱</option>
+          <option value="pvc">PVC</option>
+          <option value="suede">스웨이드</option>
+        </select>
+        <input type="number" placeholder="00%" class="input-percentage" />
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/cancel.svg"
+        />
+      </div>
+      <div class="add-emission-btn">
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/add_gray.svg"
+        />
+        <div>소재 추가</div>
+      </div>
+    </div>
+    <div class="calc-result" id="calc-result">
+      <div class="summary">
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/info.svg"
+          id="hover-compare"
+        />
+        <div id="hover-box-compare">
+          <div>변환 값 (Compare)</div>
+          <div>
+            발생한 탄소배출량을 물, 전기, 가솔린, 거리로 환산하여 자원이 얼마나
+            낭비되는지 보여줍니다.
+          </div>
+        </div>
+        <div class="total-value">
+          <div id="total-carbon">1.25</div>
+          <div>kgCO<sub>2</sub>e</div>
+        </div>
+        <div class="total-compare">
+          <div class="compare-item">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/elec.svg"
+            />
+            <div>
+              <div>스마트폰 충전 횟수</div>
+              <div id="toChargePhone">22,575 회</div>
+            </div>
+          </div>
+          <div class="compare-item">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/distance.svg"
+            />
+            <div>
+              <div>내연기관 주행거리</div>
+              <div id="toDistance">6.20 Km</div>
+            </div>
+          </div>
+          <div class="compare-item">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/tree.svg"
+            />
+            <div>
+              <div>탄소 흡수에 필요한 나무</div>
+              <div id="toTree">20.0 그루</div>
+            </div>
+          </div>
+          <div class="compare-item">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/water.svg"
+            />
+            <div>
+              <div>물 낭비 동일</div>
+              <div id="toWater">627.0 L</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph">
+        <div class="graph-item">
+          <div>
+            <div>제조(Manufacturing)</div>
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/info.svg"
+              id="hover-manufacturing"
+            />
+            <div id="hover-box-manufacturing">
+              <div>제조 (Upstream)</div>
+              <div>
+                발생한 탄소배출량을 물, 전기, 가솔린, 거리로 환산하여 자원이
+                얼마나 낭비되는지 보여줍니다.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="value-manufacturing">1.96</div>
+            <div>kgCo<sub>2</sub>e</div>
+          </div>
+          <div class="bar">
+            <div class="bar-inner" id="bar-manufacturing"></div>
+          </div>
+        </div>
+        <div class="graph-item">
+          <div>
+            <div>운송 (Transport)</div>
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/info.svg"
+              id="hover-transport"
+            />
+            <div id="hover-box-transport">
+              <div>운송 (Transport)</div>
+              <div>
+                의류가 생산되고 나서 소비자에게까지 전달되는 과정을 상세히
+                분류하여 발생될 수 있는 탄소 배출량의 합
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="value-transport">5.65</div>
+            <div>kgCo<sub>2</sub>e</div>
+          </div>
+          <div class="bar">
+            <div class="bar-inner" id="bar-transport"></div>
+          </div>
+        </div>
+        <div class="graph-item">
+          <div>
+            <div>유지보수 (Maintaince)</div>
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/info.svg"
+              id="hover-maintaince"
+            />
+            <div id="hover-box-maintaince">
+              <div>유지보수 (Maintaince)</div>
+              <div>
+                의류가 소비자에게 전달되고 나서부터 소비자가 의류를 사용,
+                세탁 과정 중에 발생하는 탄소 배출량의 합
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="value-maintaince">0.36</div>
+            <div>kgCo<sub>2</sub>e</div>
+          </div>
+          <div class="bar">
+            <div class="bar-inner" id="bar-maintaince"></div>
+          </div>
+        </div>
+        <div class="graph-item">
+          <div>
+            <div>폐기/재활용 (Retire/Recycle)</div>
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/info.svg"
+              id="hover-retire"
+            />
+            <div id="hover-box-retire">
+              <div>폐기 / 재활용 (Retire / Recycle)</div>
+              <div>
+                소비자가 의류를 폐기하거나 재활용할 때 발생할 수 있는 탄소
+                배출량의 합
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="value-retire">0.05</div>
+            <div>kgCo<sub>2</sub>e</div>
+          </div>
+          <div class="bar">
+            <div class="bar-inner" id="bar-retire"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calc-control">
+    <div class="percentage" id="percentage">
+      <div class="percent-bar" id="percent-bar">
+        <div class="percent-value" id="percent-value"></div>
+      </div>
+      <div class="text-percent" id="text-percent">0%</div>
+      <div class="text-warn" id="text-warn">
+        혼용률은 합산 100%가 되어야 합니다.
+      </div>
+    </div>
+    <div class="btn-control">
+      <div id="btn-prev">이전</div>
+      <div id="btn-next">다음</div>
+    </div>
+  </div>
+</div>
+<script src="calc.js"></script>

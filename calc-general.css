@@ -1,0 +1,264 @@
+.calc-frame {
+  font-family: "Pretendard";
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: -webkit-calc(100%-40px);
+  height: 100%;
+  background-color: #ffffff;
+  gap: 20px;
+}
+/* 가로 선 */
+.calc-line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #939393;
+}
+/* 기본 wrapper 및 국문/영문 설명 */
+.wrapper-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dsc-kr {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.dsc-en {
+  color: #828282;
+  font-size: 14px;
+}
+
+/* subject 부문 */
+.calc-subject {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calc-subject > img {
+  height: 18px;
+  width: auto;
+}
+.calc-subject > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 4px 15px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+.calc-subject > div:hover {
+  background-color: black;
+}
+.calc-subject > div:hover > div {
+  color: white;
+}
+.calc-subject > div:hover > img {
+  content: url("https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-white.svg");
+}
+.calc-subject > div > div {
+  font-size: 12px;
+}
+.calc-subject > div > img {
+  height: 24px;
+}
+
+/* title 부문 */
+.calc-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.calc-title .title {
+  font-size: 40px;
+}
+.calc-title .prd_name,
+.prd_category,
+.slash {
+  font-size: 18px;
+}
+
+/* input name 제목 입력 부문 */
+.calc-input-name {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+  width: 100%;
+  min-height: 700px;
+}
+
+.calc-input-name > input {
+  padding: 20px 24px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  font-size: 24px;
+}
+.calc-input-name > .text-warning {
+  color: red;
+  font-size: 16px;
+}
+/* input category 의류 카테고리 입력 부문 */
+.calc-input-category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  min-height: 700px;
+}
+.category-select-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #999999;
+  border-radius: 10px;
+}
+.class-big {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 200px;
+  padding: 20px;
+  border-right: 1px solid #999999;
+}
+.class-big > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  color: black;
+}
+.class-big > div > div > div:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+}
+.class-big > div > div > div:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+}
+.class-small {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 1px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+.class-select {
+  width: 100%;
+}
+.class-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+.class-select > label {
+  cursor: pointer;
+  display: block;
+  width: -webkit-calc(100% - 100px);
+  border-radius: 10px;
+  padding: 24px 40px;
+  font-size: 16px;
+  color: #999999;
+}
+.class-select > input[type="radio"] {
+  display: none;
+}
+.class-select > input[type="radio"] + label:hover {
+  cursor: pointer;
+  background-color: #e0e0e0;
+}
+.class-select > input[type="radio"]:checked + label {
+  background-color: #333;
+  color: #fff;
+}
+/* input emission 의류 소재 입력 부문 */
+.calc-input-emission {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 700px;
+  width: 100%;
+}
+.emission-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dropdown-wrapper {
+  position: relative;
+  width: 60%;
+}
+.dropdown-btn {
+  padding: 8px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 18px 20px;
+}
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  right: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.dropdown-menu .item {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dropdown-menu .item:hover {
+  font-weight: bold;
+}
+.emission-item > input {
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 30%;
+  font-size: 20px;
+}
+.emission-item > input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.add-emission-btn {
+  width: 10%;
+  cursor: pointer;
+}
+.emission-item > img {
+  cursor: pointer;
+}

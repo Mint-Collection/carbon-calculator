@@ -1,0 +1,351 @@
+<div class="calc-frame">
+  <!--Pretandard CDN 추가-->
+  <link
+    rel="stylesheet"
+    as="style"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+  />
+  <!--1. calc subject-->
+  <div class="calc-subject">
+    <img src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/logo.png" />
+    <div onclick="location.href='https://careid2.framer.ai/'">
+      <div>MORE ABOUT CAREID</div>
+      <img
+        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-dark.svg"
+      />
+    </div>
+  </div>
+  <!--2. calc-title-->
+  <div class="calc-title">
+    <div class="title">Eco Balance Calculator</div>
+    <div class="slash">/</div>
+    <div class="prd_name">{product_name}</div>
+    <div class="slash">/</div>
+    <div class="prd-category">{product_category}</div>
+  </div>
+  <!--calc-line-->
+  <div class="calc-line"></div>
+  <!--3. calc-input-name-->
+  <div class="calc-input-name">
+    <div class="wrapper-vertical">
+      <div class="dsc-kr">1. 제품명 또는 프로젝트명을 입력해주세요.</div>
+      <div class="dsc-en">Please write your product or project name.</div>
+    </div>
+    <input type="text" placeholder="Ex) My Blue shirt" />
+    <div class="text-warning">
+      올바른 제품명을 입력해주세요. Please input valiable text.
+    </div>
+  </div>
+  <!--4. calc-input-category-->
+  <div class="calc-input-category">
+    <div class="wrapper-vertical">
+      <div class="dsc-kr">2. 계산하려는 카테고리 정보를 선택해주세요.</div>
+      <div class="dsc-en">Please select category info below.</div>
+    </div>
+    <div class="category-select-box">
+      <div class="class-big">
+        <div>
+          <div>
+            <div>아우터</div>
+            <div>Outer</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>상의</div>
+            <div>Top</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>하의</div>
+            <div>Bottom</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>여성 의류</div>
+            <div>Skirt/Dress</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>속옷</div>
+            <div>Underwear</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>악세사리</div>
+            <div>Accessories</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+        <div>
+          <div>
+            <div>기타</div>
+            <div>etc</div>
+          </div>
+          <img
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
+          />
+        </div>
+      </div>
+      <div class="class-small">
+        <div class="class-name">아우터</div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="windbreaker"
+            name="category"
+            value="windbreaker"
+          />
+          <label for="windbreaker">바람막이</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="jacketfalls"
+            name="category"
+            value="jacketfalls"
+          />
+          <label for="jacketfalls">가을자켓</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="jacketwinter"
+            name="category"
+            value="jacketwinter"
+          />
+          <label for="jacketwinter">겨울자켓</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="coat" name="category" value="coat" />
+          <label for="coat">코트</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="coatfur" name="category" value="coatfur" />
+          <label for="coatfur">퍼 코트</label>
+        </div>
+        <div class="class-name">상의</div>
+        <div class="class-select">
+          <input type="radio" id="tshirt" name="category" value="tshirt" />
+          <label for="tshirt">티셔츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="shirt" name="category" value="shirt" />
+          <label for="shirt">셔츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sweather" name="category" value="sweather" />
+          <label for="sweather">스웨더</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="hoody" name="category" value="hoody" />
+          <label for="hoody">후디</label>
+        </div>
+        <div class="class-name">하의</div>
+        <div class="class-select">
+          <input type="radio" id="jeans" name="category" value="jeans" />
+          <label for="jeans">청바지</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="pants-long"
+            name="category"
+            value="pantslong"
+          />
+          <label for="pants-long">긴바지</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="pants-short"
+            name="category"
+            value="pantsshort"
+          />
+          <label for="pants-short">반바지</label>
+        </div>
+        <div class="class-name">여성 의류</div>
+        <div class="class-select">
+          <input type="radio" id="leggings" name="category" value="leggings" />
+          <label for="leggings">레깅스</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="dress" name="category" value="dress" />
+          <label for="dress">드레스</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="skirt" name="category" value="skirt" />
+          <label for="skirt">스커트</label>
+        </div>
+        <div class="class-name">신발</div>
+        <div class="class-select">
+          <input type="radio" id="slippers" name="category" value="slippers" />
+          <label for="slippers"> 슬리퍼</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sandal" name="category" value="sandal" />
+          <label for="sandal">샌들</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="sneakers" name="category" value="sneakers" />
+          <label for="sneakers">운동화</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="shoes" name="category" value="shoes" />
+          <label for="shoes">구두</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="boots" name="category" value="boots" />
+          <label for="boots">부츠</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="bootslong"
+            name="category"
+            value="bootslong"
+          />
+          <label for="boots-long">롱부츠</label>
+        </div>
+        <div class="class-select">
+          <input
+            type="radio"
+            id="bootsrubber"
+            name="category"
+            value="bootsrubber"
+          />
+          <label for="bootsrubber">고무 부츠</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="mule" name="category" value="mule" />
+          <label for="mule">뮬</label>
+        </div>
+        <div class="class-name">속옷</div>
+        <div class="class-select">
+          <input type="radio" id="panties" name="category" value="panties" />
+          <label for="panties">팬티</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="bra" name="category" value="bra" />
+          <label for="bra">브라</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="pajamas" name="category" value="pajamas" />
+          <label for="pajamas">파자마</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="socks" name="category" value="socks" />
+          <label for="socks">양말</label>
+        </div>
+        <div class="class-name">악세사리</div>
+        <div class="class-select">
+          <input type="radio" id="hat" name="category" value="hat" />
+          <label for="hat">모자</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="skarf" name="category" value="skarf" />
+          <label for="skarf">스카프</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="swimming" name="category" value="swimming" />
+          <label for="swimming">수영복</label>
+        </div>
+        <div class="class-select">
+          <input type="radio" id="gloves" name="category" value="gloves" />
+          <label for="gloves">장갑</label>
+        </div>
+        <div class="class-name">기타</div>
+        <div class="class-select">
+          <input type="radio" id="etc" name="category" value="etc" />
+          <label for="etc">장갑</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--5. calc-input-emission-->
+  <div class="calc-input-emission">
+    <div class="wrapper-vertical">
+      <div class="dsc-kr">3. 계산하려는 소재 정보를 입력 해주세요.</div>
+      <div class="dsc-en">Please add your clothes' material information.</div>
+    </div>
+    <div class="emission-item">
+      <div class="dropdown-wrapper">
+        <div class="dropdown-btn">
+          <span id="selected-item">Sort By</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="item active"></div>
+          <div class="item">나일론 / Nylon</div>
+          <div class="item">폴리에스터 / Polyester</div>
+          <div class="item">가죽 / Leather</div>
+          <div class="item">울 / Wool</div>
+          <div class="item">캐시미어 / Cashmere</div>
+          <div class="item">플리스 / Fleece</div>
+          <div class="item">퍼 / Fur</div>
+          <div class="item">모헤어 / Mohair</div>
+          <div class="item">아크릴 / Acrylic</div>
+          <div class="item">포플린 / Poplin</div>
+          <div class="item">린넨 / Flax</div>
+          <div class="item">플란넬 / Flannel</div>
+          <div class="item">저지 / Jerset</div>
+          <div class="item">데님 / Denim</div>
+          <div class="item">마 / Jute</div>
+          <div class="item">네이온 / Rayon</div>
+          <div class="item">실크 / Silk</div>
+          <div class="item">스판덱스 / Spandex</div>
+          <div class="item">모달 / Modal</div>
+          <div class="item">비스코스 / Viscose</div>
+          <div class="item">폴리우레탄 / Polyurethane</div>
+          <div class="item">고무 / Rubber</div>
+          <div class="item">나무 / Wood</div>
+          <div class="item">플라스틱 / Plastic</div>
+          <div class="item">PVC</div>
+          <div class="item">스웨이드 / Suede</div>
+        </div>
+      </div>
+      <input type="number" placeholder="00%" class="input-percentage" />
+      <img
+        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/cancel.svg"
+      />
+    </div>
+    <div class="add-emission-btn">
+      <img
+        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/add_gray.svg"
+      />
+      <div>소재 추가</div>
+    </div>
+  </div>
+  <!--6. calc-input-transport-->
+  <div class="calc-input-transport"></div>
+  <!--7. calc-loading-->
+  <div class="calc-loading"></div>
+  <!--8. calc-result-->
+  <div class="calc-result"></div>
+  <!--9. ctl-buttons-->
+  <div class="ctl-buttons"></div>
+</div>
+
+<script src="calc-general.js"></script>
+<link rel="stylesheet" href="calc-general.css" />
