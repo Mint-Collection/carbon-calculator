@@ -384,7 +384,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             return response.json();
           })
           .then((data) => {
-            console.log("Success:", data.result.data);
             responseData = data.result.data;
           })
           .catch((error) => {

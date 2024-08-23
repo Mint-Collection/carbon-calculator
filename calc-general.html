@@ -9,100 +9,121 @@
   <!--1. calc subject-->
   <div class="calc-subject">
     <img src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/logo.png" />
-    <div onclick="location.href='https://careid2.framer.ai/'">
-      <div>MORE ABOUT CAREID</div>
-      <img
-        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-dark.svg"
-      />
+    <div>
+      <!-- <div class="btn-archive" id="btn-archive">
+        <div>CALCULATOR-ARCHIVE</div>
+      </div> -->
+      <div class="btn-more" id="btn-archive">
+        <div>CALCULATOR-ARCHIVE</div>
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-dark.svg"
+        />
+      </div>
     </div>
   </div>
   <!--2. calc-title-->
   <div class="calc-title">
-    <div class="title">Eco Balance Calculator</div>
-    <div class="slash">/</div>
-    <div class="prd_name">{product_name}</div>
-    <div class="slash">/</div>
-    <div class="prd-category">{product_category}</div>
+    <div class="title">
+      <div>CIRCLE</div>
+      <div>
+        (Carbon Impact Reduction <strong>Calculator</strong> for Lifestyle and
+        Environment)
+      </div>
+    </div>
+    <div class="calc-title-info">
+      <div class="slash" id="slash-1">/</div>
+      <div class="prd_name" id="prd-name">{product_name}</div>
+      <div class="slash" id="slash-2">/</div>
+      <div class="prd-category" id="prd-category">{product_category}</div>
+    </div>
   </div>
   <!--calc-line-->
   <div class="calc-line"></div>
   <!--3. calc-input-name-->
-  <div class="calc-input-name">
+  <div class="calc-input-name" id="calc-input-name">
     <div class="wrapper-vertical">
       <div class="dsc-kr">1. 제품명 또는 프로젝트명을 입력해주세요.</div>
       <div class="dsc-en">Please write your product or project name.</div>
     </div>
-    <input type="text" placeholder="Ex) My Blue shirt" />
-    <div class="text-warning">
+    <input
+      type="text"
+      placeholder="Ex) My Blue shirt"
+      id="input-project-name"
+    />
+    <div class="text-warning" id="text-warning">
       올바른 제품명을 입력해주세요. Please input valiable text.
+    </div>
+    <div class="guide-text">
+      * 본 계산기는 현재 PC버전만 운영되고 있습니다. This calculator only works
+      on PC.
     </div>
   </div>
   <!--4. calc-input-category-->
-  <div class="calc-input-category">
+  <div class="calc-input-category" id="calc-input-category">
     <div class="wrapper-vertical">
       <div class="dsc-kr">2. 계산하려는 카테고리 정보를 선택해주세요.</div>
       <div class="dsc-en">Please select category info below.</div>
     </div>
     <div class="category-select-box">
       <div class="class-big">
-        <div>
+        <div class="class-item">
           <div>
-            <div>아우터</div>
-            <div>Outer</div>
+            <div class="class-item-name-kr" id="first-item-kr">아우터</div>
+            <div class="class-item-name-en" id="first-item-en">Outer</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>상의</div>
-            <div>Top</div>
+            <div class="class-item-name-kr">상의</div>
+            <div class="class-item-name-en">Top</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>하의</div>
-            <div>Bottom</div>
+            <div class="class-item-name-kr">하의</div>
+            <div class="class-item-name-en">Bottom</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>여성 의류</div>
-            <div>Skirt/Dress</div>
+            <div class="class-item-name-kr">여성 의류</div>
+            <div class="class-item-name-en">Skirt/Dress</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>속옷</div>
-            <div>Underwear</div>
+            <div class="class-item-name-kr">속옷</div>
+            <div class="class-item-name-en">Underwear</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>악세사리</div>
-            <div>Accessories</div>
+            <div class="class-item-name-kr">악세사리</div>
+            <div class="class-item-name-en">Accessories</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
           />
         </div>
-        <div>
+        <div class="class-item">
           <div>
-            <div>기타</div>
-            <div>etc</div>
+            <div class="class-item-name-kr">기타</div>
+            <div class="class-item-name-en">etc</div>
           </div>
           <img
             src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-right.svg"
@@ -110,7 +131,7 @@
         </div>
       </div>
       <div class="class-small">
-        <div class="class-name">아우터</div>
+        <div class="class-name">아우터 Outer</div>
         <div class="class-select">
           <input
             type="radio"
@@ -118,7 +139,7 @@
             name="category"
             value="windbreaker"
           />
-          <label for="windbreaker">바람막이</label>
+          <label for="windbreaker">바람막이 (Windbreaker)</label>
         </div>
         <div class="class-select">
           <input
@@ -127,7 +148,7 @@
             name="category"
             value="jacketfalls"
           />
-          <label for="jacketfalls">가을자켓</label>
+          <label for="jacketfalls">가을자켓 (Jacket-Autumn)</label>
         </div>
         <div class="class-select">
           <input
@@ -136,37 +157,37 @@
             name="category"
             value="jacketwinter"
           />
-          <label for="jacketwinter">겨울자켓</label>
+          <label for="jacketwinter">겨울자켓 (Jacket-Winter)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="coat" name="category" value="coat" />
-          <label for="coat">코트</label>
+          <label for="coat">코트 (Coat)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="coatfur" name="category" value="coatfur" />
-          <label for="coatfur">퍼 코트</label>
+          <label for="coatfur">퍼 코트 (Coat-fur)</label>
         </div>
-        <div class="class-name">상의</div>
+        <div class="class-name">상의 Top</div>
         <div class="class-select">
           <input type="radio" id="tshirt" name="category" value="tshirt" />
-          <label for="tshirt">티셔츠</label>
+          <label for="tshirt">티셔츠 (Tshirt)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="shirt" name="category" value="shirt" />
-          <label for="shirt">셔츠</label>
+          <label for="shirt">셔츠 (Shirt)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="sweather" name="category" value="sweather" />
-          <label for="sweather">스웨더</label>
+          <label for="sweather">스웨더 (Sweather)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="hoody" name="category" value="hoody" />
-          <label for="hoody">후디</label>
+          <label for="hoody">후디 Hoody</label>
         </div>
-        <div class="class-name">하의</div>
+        <div class="class-name">하의 Bottom</div>
         <div class="class-select">
           <input type="radio" id="jeans" name="category" value="jeans" />
-          <label for="jeans">청바지</label>
+          <label for="jeans">청바지 (Jeans)</label>
         </div>
         <div class="class-select">
           <input
@@ -175,7 +196,7 @@
             name="category"
             value="pantslong"
           />
-          <label for="pants-long">긴바지</label>
+          <label for="pants-long">긴바지 (Pants-long)</label>
         </div>
         <div class="class-select">
           <input
@@ -184,41 +205,41 @@
             name="category"
             value="pantsshort"
           />
-          <label for="pants-short">반바지</label>
+          <label for="pants-short">반바지 (Pants-short)</label>
         </div>
-        <div class="class-name">여성 의류</div>
+        <div class="class-name">여성 의류 Skirt/Dress</div>
         <div class="class-select">
           <input type="radio" id="leggings" name="category" value="leggings" />
-          <label for="leggings">레깅스</label>
+          <label for="leggings">레깅스 (Leggins)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="dress" name="category" value="dress" />
-          <label for="dress">드레스</label>
+          <label for="dress">드레스 (Dress)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="skirt" name="category" value="skirt" />
-          <label for="skirt">스커트</label>
+          <label for="skirt">스커트 (Skirt)</label>
         </div>
-        <div class="class-name">신발</div>
+        <div class="class-name">신발 Shoes</div>
         <div class="class-select">
           <input type="radio" id="slippers" name="category" value="slippers" />
-          <label for="slippers"> 슬리퍼</label>
+          <label for="slippers"> 슬리퍼 (Slipper)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="sandal" name="category" value="sandal" />
-          <label for="sandal">샌들</label>
+          <label for="sandal">샌들 (Sandal)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="sneakers" name="category" value="sneakers" />
-          <label for="sneakers">운동화</label>
+          <label for="sneakers">운동화 (Sneakers)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="shoes" name="category" value="shoes" />
-          <label for="shoes">구두</label>
+          <label for="shoes">구두 (Shoes)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="boots" name="category" value="boots" />
-          <label for="boots">부츠</label>
+          <label for="boots">부츠 (Boots)</label>
         </div>
         <div class="class-select">
           <input
@@ -227,7 +248,7 @@
             name="category"
             value="bootslong"
           />
-          <label for="boots-long">롱부츠</label>
+          <label for="boots-long">롱부츠 (Boots-long)</label>
         </div>
         <div class="class-select">
           <input
@@ -236,99 +257,59 @@
             name="category"
             value="bootsrubber"
           />
-          <label for="bootsrubber">고무 부츠</label>
+          <label for="bootsrubber">고무 부츠 (Boots-rubber)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="mule" name="category" value="mule" />
-          <label for="mule">뮬</label>
+          <label for="mule">뮬 (Mule)</label>
         </div>
-        <div class="class-name">속옷</div>
+        <div class="class-name">속옷 Underwear</div>
         <div class="class-select">
           <input type="radio" id="panties" name="category" value="panties" />
-          <label for="panties">팬티</label>
+          <label for="panties">팬티 (Panties)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="bra" name="category" value="bra" />
-          <label for="bra">브라</label>
+          <label for="bra">브라 (Bra)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="pajamas" name="category" value="pajamas" />
-          <label for="pajamas">파자마</label>
+          <label for="pajamas">파자마 (Pajamas)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="socks" name="category" value="socks" />
-          <label for="socks">양말</label>
+          <label for="socks">양말 (Socks)</label>
         </div>
-        <div class="class-name">악세사리</div>
+        <div class="class-name">악세사리 Accessories</div>
         <div class="class-select">
           <input type="radio" id="hat" name="category" value="hat" />
-          <label for="hat">모자</label>
+          <label for="hat">모자 (Hat/Cap)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="skarf" name="category" value="skarf" />
-          <label for="skarf">스카프</label>
+          <label for="skarf">스카프 (Skirf)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="swimming" name="category" value="swimming" />
-          <label for="swimming">수영복</label>
+          <label for="swimming">수영복 (Swimming)</label>
         </div>
         <div class="class-select">
           <input type="radio" id="gloves" name="category" value="gloves" />
-          <label for="gloves">장갑</label>
+          <label for="gloves">장갑 (Gloves)</label>
         </div>
-        <div class="class-name">기타</div>
+        <div class="class-name">기타 etc</div>
         <div class="class-select">
           <input type="radio" id="etc" name="category" value="etc" />
-          <label for="etc">장갑</label>
+          <label for="etc">기타 (etc)</label>
         </div>
       </div>
     </div>
   </div>
   <!--5. calc-input-emission-->
-  <div class="calc-input-emission">
+  <div class="calc-input-emission" id="calc-input-emission">
     <div class="wrapper-vertical">
       <div class="dsc-kr">3. 계산하려는 소재 정보를 입력 해주세요.</div>
       <div class="dsc-en">Please add your clothes' material information.</div>
-    </div>
-    <div class="emission-item">
-      <div class="dropdown-wrapper">
-        <div class="dropdown-btn">
-          <span id="selected-item">Sort By</span>
-        </div>
-        <div class="dropdown-menu">
-          <div class="item active"></div>
-          <div class="item">나일론 / Nylon</div>
-          <div class="item">폴리에스터 / Polyester</div>
-          <div class="item">가죽 / Leather</div>
-          <div class="item">울 / Wool</div>
-          <div class="item">캐시미어 / Cashmere</div>
-          <div class="item">플리스 / Fleece</div>
-          <div class="item">퍼 / Fur</div>
-          <div class="item">모헤어 / Mohair</div>
-          <div class="item">아크릴 / Acrylic</div>
-          <div class="item">포플린 / Poplin</div>
-          <div class="item">린넨 / Flax</div>
-          <div class="item">플란넬 / Flannel</div>
-          <div class="item">저지 / Jerset</div>
-          <div class="item">데님 / Denim</div>
-          <div class="item">마 / Jute</div>
-          <div class="item">네이온 / Rayon</div>
-          <div class="item">실크 / Silk</div>
-          <div class="item">스판덱스 / Spandex</div>
-          <div class="item">모달 / Modal</div>
-          <div class="item">비스코스 / Viscose</div>
-          <div class="item">폴리우레탄 / Polyurethane</div>
-          <div class="item">고무 / Rubber</div>
-          <div class="item">나무 / Wood</div>
-          <div class="item">플라스틱 / Plastic</div>
-          <div class="item">PVC</div>
-          <div class="item">스웨이드 / Suede</div>
-        </div>
-      </div>
-      <input type="number" placeholder="00%" class="input-percentage" />
-      <img
-        src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/cancel.svg"
-      />
     </div>
     <div class="add-emission-btn">
       <img
@@ -338,14 +319,921 @@
     </div>
   </div>
   <!--6. calc-input-transport-->
-  <div class="calc-input-transport"></div>
-  <!--7. calc-loading-->
-  <div class="calc-loading"></div>
+  <div class="calc-input-transport" id="calc-input-transport">
+    <div class="wrapper-vertical">
+      <div class="dsc-kr">4. 계산하려는 운송 정보를 입력 해주세요.</div>
+      <div class="dsc-en">
+        Please enter the information about your shipment.
+      </div>
+    </div>
+    <div class="transport-pass">
+      <div id="transport-known-btn">
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/check-yes.png"
+        />
+        <div class="pass-kr" id="know-text-kr">
+          운송에 관련된 정보를 알고 있습니다.
+        </div>
+        <div class="pass-en" id="know-text-en">
+          I know the transportation information.
+        </div>
+      </div>
+      <div id="transport-unknown-btn">
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/check-no.png"
+        />
+        <div class="pass-kr" id="unknow-text-kr">
+          운송에 관련된 정보를 모릅니다.
+        </div>
+        <div class="pass-en" id="unknow-text-en">
+          I don't know the transportation information.
+        </div>
+      </div>
+    </div>
+    <div class="toggle-transport" id="toggle-transport">
+      <div class="transport-title">
+        4-1. 선박 운송 정보 (Shipping Information)
+      </div>
+      <div class="select-box">
+        <div class="hbr-title">출발항 선택 (Departure) :</div>
+        <select class="select-departure" id="select-departure">
+          <option value="0" disabled selected>출발항 선택 (Departure)</option>
+          <option value="279">Aden(예맨)</option>
+          <option value="284">Akkeshi(일본)</option>
+          <option value="292">Amboina(Banda Sea)</option>
+          <option value="299">Amoy(중국)</option>
+          <option value="302">Angaur(마샬 제도)</option>
+          <option value="305">Antwerp(벨기에)</option>
+          <option value="306">Aomori(일본)</option>
+          <option value="309">Apia(사모아제도)</option>
+          <option value="316">Athinai(그리스)</option>
+          <option value="327">BaliKpapan(인도네시아)</option>
+          <option value="330">Balintang Channel(필리핀)</option>
+          <option value="336">Bangkok(태국)</option>
+          <option value="340">Barcelona(스페인)</option>
+          <option value="343">Basrah(이라크)</option>
+          <option value="357">Beppu(일본)</option>
+          <option value="379">Buenos Aires(아르헨티나)</option>
+          <option value="398">Callao(페루)</option>
+          <option value="406">Cape Horn(칠레)</option>
+          <option value="407">Cape Leeuwin(호주)</option>
+          <option value="412">Cape of Good Hope(남아프리카 공화국)</option>
+          <option value="411">Cape Town(남아프리카 공화국)</option>
+          <option value="419">Cebu(필리핀)</option>
+          <option value="432">Chilung(대만)</option>
+          <option value="440">Cirebon(인도네시아)</option>
+          <option value="443">Colombo(스리랑카)</option>
+          <option value="460">Dalian(중국)</option>
+          <option value="465">Davao(필리핀)</option>
+          <option value="467">De-kastri(러시아)</option>
+          <option value="491">Dutch Harbour(알라스카)</option>
+          <option value="505">Fremantle(호주)</option>
+          <option value="511">Genova(이탈리아)</option>
+          <option value="521">Gibraltar, Strait of(지중해)</option>
+          <option value="536">Guangzhou(중국)</option>
+          <option value="549">Haiphong(베트남)</option>
+          <option value="552">Hakata(일본)</option>
+          <option value="555">Hakodate(일본)</option>
+          <option value="558">Hamburg(독일)</option>
+          <option value="559">Hankou(중국)</option>
+          <option value="563">Hiroshima(일본)</option>
+          <option value="565">Hochiminh(베트남)</option>
+          <option value="574">Hong Kong(중국)</option>
+          <option value="578">Honolulu(미국)</option>
+          <option value="591">Iloilo(필리핀)</option>
+          <option value="601">Istanbul(터키)</option>
+          <option value="603">Izuhara(일본)</option>
+          <option value="605">Jakarta(인도네시아)</option>
+          <option value="610">Jesselton(말레이시아)</option>
+          <option value="614">Jolo(필리핀)</option>
+          <option value="616">Kagoshima(일본)</option>
+          <option value="617">Kamaishi(일본)</option>
+          <option value="625">Kaohsiung(대만)</option>
+          <option value="637">Khawr Fakkan(UAE)</option>
+          <option value="646">Kobe(일본)</option>
+          <option value="647">Kochi(일본)</option>
+          <option value="649">Kolkata(인도)</option>
+          <option value="655">Kuching(말레이시아)</option>
+          <option value="659">Kupang(인도네시아)</option>
+          <option value="660">Kure(일본)</option>
+          <option value="685">Legaspi(필리핀)</option>
+          <option value="691">Liverpool(영국)</option>
+          <option value="693">Lohsingtamaoti(중국)</option>
+          <option value="697">Lombok Strait(인도네시아)</option>
+          <option value="702">Los Angeles(미국)</option>
+          <option value="721">Maizuru(일본)</option>
+          <option value="723">Makassar(인도네시아)</option>
+          <option value="731">Manila(필리핀)</option>
+          <option value="743">Marseille(프랑스)</option>
+          <option value="752">Mazatlan(멕시코)</option>
+          <option value="756">Melbourne(호주)</option>
+          <option value="757">Menado(인도네시아)</option>
+          <option value="759">Midway I.(미국)</option>
+          <option value="760">Miike(일본)</option>
+          <option value="775">Mombasa(아프리카)</option>
+          <option value="788">Mozi(일본)</option>
+          <option value="792">Mumbai(인도)</option>
+          <option value="795">Muroran(일본)</option>
+          <option value="797">Nagasaki(일본)</option>
+          <option value="799">Nagoya(일본)</option>
+          <option value="801">Naha(일본)</option>
+          <option value="817">Napoli(이탈리아)</option>
+          <option value="820">Nemuro(일본)</option>
+          <option value="825">New York(미국)</option>
+          <option value="828">Niigata(일본)</option>
+          <option value="831">Nikolayevsk na Amure(러시아)</option>
+          <option value="859">Osaka(일본)</option>
+          <option value="864">Pago Pago,(사모아)</option>
+          <option value="871">Panama(파나마)</option>
+          <option value="886">Petropavlovsk(러시아)</option>
+          <option value="900">Port Apra(미국)</option>
+          <option value="902">Port Darwin(호주)</option>
+          <option value="909">Port Said(이집트)</option>
+          <option value="929">Qingdao(중국)</option>
+          <option value="932">Qinhuangdao(중국)</option>
+          <option value="943">Rio de Janeiro(브라질)</option>
+          <option value="946">Rotterdam(네덜란드)</option>
+          <option value="947">Saipan(미국)</option>
+          <option value="949">Sakai(일본)</option>
+          <option value="957">San Diego(미국)</option>
+          <option value="962">San Francisco(미국)</option>
+          <option value="969">Sandakan(인도네시아)</option>
+          <option value="989">Sasebo(일본)</option>
+          <option value="992">Seattle(미국)</option>
+          <option value="994">Semarang(인도네시아)</option>
+          <option value="997">Shanghai(중국)</option>
+          <option value="998">Shantou(중국)</option>
+          <option value="1000">Shimizu(일본)</option>
+          <option value="1011">Singapore(싱가포르)</option>
+          <option value="1034">Sunda Strait(인도네시아)</option>
+          <option value="1035">Surabaya(인도네시아)</option>
+          <option value="1039">Suva(남태평양)</option>
+          <option value="1041">Sydney(호주)</option>
+          <option value="1042">Tabaco(필리핀)</option>
+          <option value="1047">Tahiti(남태평양)</option>
+          <option value="1054">Tanggu(중국)</option>
+          <option value="1059">Tarakan(인도네시아)</option>
+          <option value="1071">Thursday I.(미국)</option>
+          <option value="1077">Tokyo(일본)</option>
+          <option value="1113">Valparaiso(칠레)</option>
+          <option value="1116">Vancouver(캐나다)</option>
+          <option value="1118">Verde I. Passage(필리핀)</option>
+          <option value="1123">Vladivostok(러시아)</option>
+          <option value="1128">Wakamatsu(일본)</option>
+          <option value="1130">Wakkanai(일본)</option>
+          <option value="1135">Wellington(뉴질랜드)</option>
+          <option value="1145">Yangon(미얀마)</option>
+          <option value="1155">Yokohama(일본)</option>
+          <option value="1156">Yokosuka(일본)</option>
+          <option value="1163">Zamboanga(필리핀)</option>
+        </select>
+      </div>
+      <div class="select-box">
+        <div class="hbr-title">도착항 선택 (Destination) :</div>
+        <select class="select-destination" id="select-destination">
+          <option value="0" disabled selected>도착항 선택 (Destination)</option>
+        </select>
+      </div>
+      <div class="check-box-shipping">
+        <input id="check-dont-know" type="checkbox" />알수 없음 Don't know -
+        (출발항과 도착정보를 가지고 있지 않습니다. / Don't know departure and
+        destination info)
+      </div>
+      <div class="transport-title">
+        4-2. 차량 운송 정보 (Vehicle Information)
+      </div>
+      <div class="check-not-filled">
+        <input type="checkbox" id="check-not-filled" />
+        <div>입력되지 않은 항목을 제외한 나머지 항목은 알지 못합니다.</div>
+      </div>
+      <div class="transport-grid">
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>1. 차량 1회 이동 거리</div>
+              <div>Transport distance</div>
+            </div>
+            <div>
+              제품을 운송하기위해 차량이 한번 움직일때 이동되는 총
+              거리입니다.<br />
+              The total distance traveled once the vehicle moves to transport
+              the product.
+            </div>
+          </div>
+          <input type="number" placeholder="Ex) 0.0 (Km)" id="input-distance" />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-distance" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>2. 차량 1회 적재량</div>
+              <div>Transport Amount(Ton)</div>
+            </div>
+            <div>
+              제품을 운송하기위해 차량이 한번 움직일 때 운반되는 총 무게
+              입니다.<br />
+              The total weight carried by the vehicle once it moves to transport
+              the product.
+            </div>
+          </div>
+          <input type="number" placeholder="Ex) 0.0 (Ton)" id="input-amount" />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-amount" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>3. 차량 복합 연비</div>
+              <div>Vehicle Efficiency(Km/liter)</div>
+            </div>
+            <div>
+              차량이 km 당 움직일때 소요되는 화학연료의 효율입니다.<br />The
+              efficiency of chemical fuel required when the vehicle moves per
+              km.
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (Km/liters)"
+            id="input-efficiency"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-efficiency" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>4. 운송 전력</div>
+              <div>Eletricity (kWh)</div>
+            </div>
+            <div>
+              제품 운송시 발생되는 모든 전기의 소모량 입니다.<br />This is the
+              consumption of all electricity generated during product
+              transportation.
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (kWh/Clothes)"
+            id="input-electricity"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-electricity" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>5. 디젤(WTT)</div>
+              <div>Diesel well-to-tank(kgDiesel)</div>
+            </div>
+            <div>
+              원유 채굴부터 정제 및 유통까지의 과정에서 발생하는 에너지 소비와
+              배출을 측정하는 개념입니다.<br />Diesel WTT (Well-to-Tank) refers
+              to the measurement of energy consumption and emissions from the
+              extraction of crude oil through refining and distribution up to
+              the fuel tank.
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (kgDiesel)"
+            id="input-diesel-wtt"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-diesel-wtt" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>6. 디젤(TTW)</div>
+              <div>Diesel well-to-tank(kgDiesel)</div>
+            </div>
+            <div>
+              디젤 TTW(Tank-to-Wheel)는 연료 탱크에서 차량의 바퀴까지 디젤
+              연료가 연소되는 동안 발생하는 에너지 소비와 배출을 측정하는
+              개념입니다.<br />Diesel TTW (Tank-to-Wheel) measures the energy
+              consumption and emissions produced during the combustion of diesel
+              fuel in a vehicle from the fuel tank to the wheels.
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (literDiesel)"
+            id="input-diesel-ttw"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-diesel-ttw" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>7. 디젤 밀도</div>
+              <div>Diesel Density</div>
+            </div>
+            <div>
+              디젤 밀도는 디젤 연료의 질량이 부피에 대해 얼마나 무거운지를
+              나타내는 물리적 특성입니다.<br />Diesel Diesel density is a
+              physical property that indicates how heavy the diesel fuel is
+              relative to its volume.
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (Liters)"
+            id="input-diesel-density"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-diesel-density" />알수 없음 (The
+            information is unknown. Set as a default value.)
+          </div>
+        </div>
+        <div class="transport-item">
+          <div class="transport-description">
+            <div>
+              <div>8. 한벌에 적용되는 전력</div>
+              <div>Eletricity(kWh/Clothes)</div>
+            </div>
+            <div>
+              의류를 재활용하거나 재사용하기 위해 사용하는 전기. 재활용 공정에서
+              의류 한 벌을 처리하는 데 필요한 전력량<br />Electricity used to
+              recycle or reuse clothing. The amount of power needed to dispose
+              of a garment in the recycling process
+            </div>
+          </div>
+          <input
+            type="number"
+            placeholder="Ex) 0.0 (kWh/Clothes)"
+            id="input-recondition-elec"
+          />
+          <div class="check-dont-know">
+            <input type="checkbox" id="unknown-recondition-elec" />알수 없음
+            (The information is unknown. Set as a default value.)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--7. loading-->
+  <div class="calc-loading" id="calc-loading">
+    <div class="loader loader-8"></div>
+    <div class="loading-text">Calculating...</div>
+  </div>
   <!--8. calc-result-->
-  <div class="calc-result"></div>
-  <!--9. ctl-buttons-->
-  <div class="ctl-buttons"></div>
-</div>
+  <div class="calc-result" id="calc-result">
+    <div class="graph-horizontal">
+      <div class="total-carbon" id="total-carbon">16.38</div>
+      <div class="total-unit">Total<br />KgCo<sub>2</sub>e</div>
+      <div class="horizontal-bar">
+        <div class="bar-manufacturing" id="bar-value-manufacturing">
+          <div class="bar-name" style="z-index: 20">Manufacturing</div>
+          <div
+            class="bar-value"
+            style="z-index: 20"
+            id="manufacturing-amount-kg"
+          >
+            1.562
+          </div>
+        </div>
+        <div class="bar-transport" id="bar-value-transport">
+          <div class="bar-name" style="z-index: 20">Transport</div>
+          <div class="bar-value" style="z-index: 20" id="transport-amount-kg">
+            0.56
+          </div>
+        </div>
+        <div class="bar-maintaince" id="bar-value-maintaince">
+          <div class="bar-name" style="z-index: 20">Maintaince</div>
+          <div class="bar-value" style="z-index: 20" id="maintaince-amount-kg">
+            0.31
+          </div>
+        </div>
+        <div class="bar-retire" id="bar-value-retire">
+          <div class="bar-name" style="z-index: 20">Retire</div>
+          <div class="bar-value" style="z-index: 20" id="retire-amount-kg">
+            2.6
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-bar-m">
+        <div class="bar-manufacturing-m">
+          <div class="mb1" id="mb1v"></div>
+          <div class="mbp1" id="mbp1t"></div>
+        </div>
+        <div class="bar-transport-m">
+          <div class="mb2" id="mb2v"></div>
+          <div class="mbp2" id="mbp2t"></div>
+        </div>
+        <div class="bar-maintaince-m">
+          <div class="mb3" id="mb3v"></div>
+          <div class="mbp2" id="mbp3t"></div>
+        </div>
+        <div class="bar-retire-m">
+          <div class="mb4" id="mb4v"></div>
+          <div class="mbp2" id="mbp4t"></div>
+        </div>
+      </div>
+    </div>
+    <div class="graph-vertical">
+      <div class="graph-section">
+        <div class="section-title">생산자 부문 / Producer Section</div>
+        <div class="section-graph">
+          <div class="section-item">
+            <div>1.제조 (Manufacturing)</div>
+            <div class="vg">
+              <div
+                class="vg-value"
+                style="background-color: #41d98d"
+                id="vg-manufacturing"
+              ></div>
+            </div>
+            <div class="graph-quantified">
+              <div id="vg-manufacturing-percent">63%</div>
+              <div id="vg-manufacturing-kg">1.562 KgCo<sub>2</sub>e</div>
+            </div>
+          </div>
+          <div class="section-item">
+            <div>2. 운송 (Transport)</div>
+            <div class="vg">
+              <div
+                class="vg-value"
+                style="background-color: rgba(61, 156, 109, 0.57)"
+                id="vg-transport"
+              ></div>
+            </div>
+            <div class="graph-quantified">
+              <div id="vg-transport-percent">63%</div>
+              <div id="vg-transport-kg">1.562 KgCo<sub>2</sub>e</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph-section">
+        <div class="section-title">소비자 부문 / Consumer Section</div>
+        <div class="section-graph">
+          <div class="section-item">
+            <div>3. 유지 (Maintaince)</div>
+            <div class="vg">
+              <div
+                class="vg-value"
+                style="background-color: rgba(152, 232, 192, 0.68)"
+                id="vg-maintaince"
+              ></div>
+            </div>
+            <div class="graph-quantified">
+              <div id="vg-maintaince-percent">63%</div>
+              <div id="vg-maintaince-kg">1.562 KgCo<sub>2</sub>e</div>
+            </div>
+          </div>
+          <div class="section-item">
+            <div>4. 폐기/재활용 (Retire/Recycle)</div>
+            <div class="vg">
+              <div
+                class="vg-value"
+                style="background-color: rgba(65, 217, 141, 0.18)"
+                id="vg-retire"
+              ></div>
+            </div>
+            <div class="graph-quantified">
+              <div id="vg-retire-percent">63%</div>
+              <div id="vg-retire-kg">1.562 KgCo<sub>2</sub>e</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-line"></div>
+    <div class="result-sub-title">
+      1. 제조
+      <div class="result-sub-title-en">Manufacturing</div>
+    </div>
+    <div class="result-manufacturing">
+      <div class="result-percentage">
+        <div id="manufacturing-big-value">1.562 kgCo<sub>2</sub>e</div>
+        <div id="manufacturing-big-percent">63%</div>
+      </div>
+      <div class="manufacturing-items">
+        <div class="manufacturing-item">
+          <div>면</div>
+          <div>Cotton</div>
+          <div class="material-detail">
+            <div>소재 비율<br />Material Ratio</div>
+            <div class="material-detail-percent">25%</div>
+          </div>
+          <div class="material-detail">
+            <div>소재 탄소량<br />Material Carbon</div>
+            <div class="material-detail-kg">0.534 KgCo<sub>2</sub>e</div>
+          </div>
+        </div>
+        <div class="manufacturing-item">
+          <div>면</div>
+          <div>Cotton</div>
+          <div class="material-detail">
+            <div>소재 비율<br />Material Ratio</div>
+            <div class="material-detail-percent">25%</div>
+          </div>
+          <div class="material-detail">
+            <div>소재 탄소량<br />Material Carbon</div>
+            <div class="material-detail-kg">0.534 KgCo<sub>2</sub>e</div>
+          </div>
+        </div>
+        <div class="manufacturing-item">
+          <div>면</div>
+          <div>Cotton</div>
+          <div class="material-detail">
+            <div>소재 비율<br />Material Ratio</div>
+            <div class="material-detail-percent">25%</div>
+          </div>
+          <div class="material-detail">
+            <div>소재 탄소량<br />Material Carbon</div>
+            <div class="material-detail-kg">0.534 KgCo<sub>2</sub>e</div>
+          </div>
+        </div>
+        <div class="manufacturing-item">
+          <div>면</div>
+          <div>Cotton</div>
+          <div class="material-detail">
+            <div>소재 비율<br />Material Ratio</div>
+            <div class="material-detail-percent">25%</div>
+          </div>
+          <div class="material-detail">
+            <div>소재 탄소량<br />Material Carbon</div>
+            <div class="material-detail-kg">0.534 KgCo<sub>2</sub>e</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-line"></div>
+    <div class="result-sub-title">
+      2. 운송
+      <div class="result-sub-title-en">Transport</div>
+    </div>
+    <div class="result-sub-title-info">
+      * 입력되지 않은 값들이 존재할 경우, 자동으로 설정된 기본 값으로 설정되어
+      계산됩니다.<br />If there are unentered values, they are automatically set
+      to the default value and calculated.
+    </div>
+    <div class="result-transport">
+      <div class="result-percentage">
+        <div id="transport-big-value">1.562 kgCo<sub>2</sub>e</div>
+        <div id="transport-big-percent">11%</div>
+      </div>
+      <div class="transport-board">
+        <div class="transport-map">
+          <div class="map-node">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/departure.svg"
+            />
+            <div>Departure</div>
+            <div id="departure-text">Bangkok</div>
+          </div>
+          <div class="transport-arrow"></div>
+          <div class="map-node">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/stopover.svg"
+            />
+            <div>Stopover</div>
+            <div id="stopover-text">Bangkok</div>
+          </div>
+          <div class="transport-arrow"></div>
+          <div class="map-node">
+            <img
+              src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/destination.svg"
+            />
+            <div>Destination</div>
+            <div id="destination-text">Bangkok</div>
+          </div>
+        </div>
+        <div class="transport-details">
+          <div>
+            <div>출발<br />Departure</div>
+            <div id="departure2-text">방콕</div>
+          </div>
+          <div>
+            <div>경유지<br />Stopover</div>
+            <div id="stopover2-text">말레이시아</div>
+          </div>
+          <div>
+            <div>도착지<br />Destination</div>
+            <div id="destination2-text">부산</div>
+          </div>
+          <div>
+            <div>항해 거리<br />Sailing Distance</div>
+            <div id="sailing-distance">2083 Km</div>
+          </div>
+          <div>
+            <div>차량 1회 이동 거리<br />Transport Distance</div>
+            <div id="distance-car">151.4 Km</div>
+          </div>
+          <div>
+            <div>차량 1회 이동 적재량<br />Transport Amount</div>
+            <div id="amount-car">1.78 ton</div>
+          </div>
+          <div>
+            <div>차량 복합 연비<br />Transport Efficiency</div>
+            <div id="efficiency-car">7.2 Km/L</div>
+          </div>
+          <div>
+            <div>디젤(WTT)<br />Diesel well-to-tank</div>
+            <div id="wtt">0.562 kgDiesel</div>
+          </div>
+          <div>
+            <div>디젤(TTW)<br />Diesel tank-to-wheel</div>
+            <div id="ttw">2.67 literDiesel</div>
+          </div>
+          <div>
+            <div>디젤 밀도<br />Diesel Density</div>
+            <div id="diesel-density">0.838 Kg / Liters</div>
+          </div>
+          <div>
+            <div>전기<br />Electricity</div>
+            <div id="electricity-car">0.522 KgCo<sub>2</sub>e/kwh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-line"></div>
+    <div class="result-sub-title">
+      3. 유지
+      <div class="result-sub-title-en">Maintaince</div>
+    </div>
+    <div class="result-maintaince">
+      <div class="result-percentage">
+        <div id="maintaince-big-value">1.562 kgCo<sub>2</sub>e</div>
+        <div id="maintaince-big-percent">15%</div>
+      </div>
+      <div class="maintaince-items">
+        <div>
+          <div>세탁 (월)</div>
+          <div>
+            Washing times<br />
+            per month
+          </div>
+          <div id="washing-month">0.5</div>
+        </div>
+        <div>
+          <div>세탁 (년)</div>
+          <div>
+            Washing times<br />
+            per year
+          </div>
+          <div id="washing-year">6</div>
+        </div>
+        <div>
+          <div>계절성</div>
+          <div>Seasonal</div>
+          <div id="season">2</div>
+        </div>
+        <div>
+          <div>의류 사용 기간 (월)</div>
+          <div>Lifespan (Month)</div>
+          <div id="lifespan">36</div>
+        </div>
+        <div>
+          <div>1회 세탁 탄소 발생량</div>
+          <div>Carbon amount<br />per washing once (kgCo2e)</div>
+          <div id="washing-carbon" style="font-size: 27px">0.375</div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-line"></div>
+    <div class="result-sub-title">
+      4. 폐기/재활용
+      <div class="result-sub-title-en">Retire/Recycle</div>
+    </div>
+    <div class="result-retire">
+      <div class="result-percentage">
+        <div id="retire-big-value">1.562 kgCo<sub>2</sub>e</div>
+        <div id="retire-big-percent">27%</div>
+      </div>
+      <div class="retire-items">
+        <div style="position: relative">
+          <div>평균 탄소 발생량</div>
+          <div>Average Carbon Generation</div>
+          <div id="carbon-retire-recycle">2.6 KgCo2e</div>
+          <img
+            class="carbon-additional-info"
+            src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/icon_info.png"
+            id="hover-info"
+          />
+          <div id="info-text">
+            의류는 평균적으로 폐기 될 확률이 70%, 재활용 될 확률이 30%
+            입니다.<br /><strong>평균 탄소 발생량</strong>은 두가지 확률을 모두
+            고려하여 한벌의 옷이 버려질 때 발생할 수 있는 탄소 예측량 입니다.<br /><br />
+            On average, clothing has a 70% chance of being discarded and a 30%
+            chance of being recycled.<br />
+            The average carbon generation is both probabilities Considering, it
+            is a carbon forecast that can occur when one piece of clothing is
+            thrown away.<br /><br />
 
-<script src="calc-general.js"></script>
-<link rel="stylesheet" href="calc-general.css" />
+            자료 근거 : 미국 환경보호청(US-EPA), TheRoundup, Mckinsey &
+            Company<br />
+            U.S. Environmental Protection Agency (US-EPA), The Roundup, McKinsey
+            & Company
+          </div>
+        </div>
+        <div>
+          <div>폐기 탄소발생량</div>
+          <div>Amount of discarded carbon generated</div>
+          <div id="carbon-retire">2.6 KgCo2e</div>
+        </div>
+        <div>
+          <div>재활용 탄소발생량</div>
+          <div>Amount of recycled carbon generated</div>
+          <div id="carbon-recycle">2.6 KgCo2e</div>
+        </div>
+        <div>
+          <div>재활용 폐기 비교절감량</div>
+          <div>Benefits if recycle</div>
+          <div style="display: flex; flex-direction: column">
+            <div id="carbon-recycle-benefit">2.6 KgCo2e</div>
+            <div id="ratio-recycle-benefit">40%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-line"></div>
+    <div class="result-sub-title">
+      5. 전환 비교
+      <div class="result-sub-title-en">Comparison</div>
+    </div>
+    <div class="result-comparison">
+      <div>
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/c_phone.svg"
+        />
+        <div>스마트폰 충전</div>
+        <div>To Charge Phone</div>
+        <div id="to-phone">2,530 회</div>
+      </div>
+      <div>
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/c_truck.svg"
+        />
+        <div>내연기관 주행</div>
+        <div>To driving distance</div>
+        <div id="to-distance">27.4 Km</div>
+      </div>
+      <div>
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/c_tree.svg"
+        />
+        <div>탄소 정화 나무</div>
+        <div>To trees</div>
+        <div id="to-tree">3.4 그루</div>
+      </div>
+      <div>
+        <img
+          src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/c_water.svg"
+        />
+        <div>물 사용</div>
+        <div>To usage of water</div>
+        <div id="to-water">41.7 L</div>
+      </div>
+    </div>
+  </div>
+  <!--9. calc-archive-->
+  <div class="calc-archive" id="calc-archive">
+    <div class="archive-text">
+      <div>
+        여기는 사용자들이 CIRCLE 계산기를 통해 데이터를 저장한 아카이빙 보관
+        장소입니다. 저장한 정보는 비밀번호 입력을 통해서 열람 할 수 있습니다.
+      </div>
+      <div>
+        This is where users archive their data through the CIRCLE calculator
+        Place. You can view your saved information by entering your password.
+      </div>
+    </div>
+    <div class="archive-header">
+      <input
+        type="text"
+        placeholder="글 작성자 / Author"
+        id="archive-search-author"
+      />
+      <input
+        type="text"
+        placeholder="글 제목 / Title"
+        id="archive-search-name"
+      />
+      <img
+        src="https://img.careid.xyz/icons/search_cacl_white.png"
+        id="archive-search-btn"
+      />
+    </div>
+    <div class="calc-line"></div>
+    <div class="archive-content" id="archive-content">
+      <div class="archive-item">
+        <div class="archive-top">
+          <div class="archive-no">DOC-1</div>
+          <div class="archive-name">프로젝트명</div>
+          <div class="archive-category">의류 카테고리</div>
+          <div class="archive-carbon">
+            <div>16.93</div>
+            <div>KgCo<sub>2</sub>e</div>
+          </div>
+        </div>
+        <div class="archive-bottom">
+          <div class="archive-author">작성자</div>
+          <div class="archive-date">2024.01.08</div>
+        </div>
+      </div>
+    </div>
+    <div class="archive-pagenation">
+      <div class="page-btn" id="page-first">&lt;&lt;</div>
+      <div class="page-btn" id="page-prev">&lt;</div>
+      <div class="page-num" id="page-num">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+      <div class="page-btn" id="page-next">&gt;</div>
+      <div class="page-btn" id="page-last">&gt;&gt;</div>
+    </div>
+  </div>
+  <!--10. calc-control-->
+  <div class="calc-control">
+    <div class="calc-percent" id="calc-percent">
+      <div class="percent-bar" id="percent-bar">
+        <div class="percent-value"></div>
+      </div>
+      <div class="percent-text" id="percent-text">0%</div>
+      <div class="percent-warn" id="percent-warn">
+        소재의 총 합은 100% 여야 합니다.<br />
+        The sum of material's percentage must be 100%
+      </div>
+    </div>
+    <div>
+      <div id="btn-prev">이전</div>
+      <div id="btn-next">다음</div>
+      <div id="btn-save">저장하기</div>
+      <div id="btn-goback">돌아가기</div>
+      <div id="btn-gobacklist">목록으로 돌아가기</div>
+    </div>
+  </div>
+  <!--11. calc-modals-->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-input">
+        <div>작성자<br />Author</div>
+        <input type="text" name="author" maxlength="40" id="calc-author" />
+      </div>
+      <div class="modal-input">
+        <div>비밀번호<br />Password</div>
+        <input
+          type="password"
+          name="password"
+          id="input-password"
+          maxlength="18"
+        />
+      </div>
+      <div class="modal-input">
+        <div>비밀번호 확인<br />Password Confirm</div>
+        <input
+          type="password"
+          name="password-confirm"
+          id="input-password-confirm"
+          maxlength="18"
+        />
+      </div>
+      <div class="modal-control">
+        <div id="cancel-btn">취소 Cancel</div>
+        <div id="confirm-btn">확인 Confirm</div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-authorization" class="modal-authorization">
+    <div class="modal-auth-content">
+      <div class="modal-input">
+        <div>비밀번호 / Password :</div>
+        <input
+          type="password"
+          name="password"
+          maxlength="40"
+          id="calc-auth-password"
+        />
+      </div>
+      <div class="modal-auth-control">
+        <div id="auth-cancel-btn">취소 Cancel</div>
+        <div id="auth-delete-btn">삭제 Delete</div>
+        <div id="auth-confirm-btn">열람 Read</div>
+      </div>
+    </div>
+  </div>
+  <script src="calc-general.js"></script>
+  <link rel="stylesheet" href="calc-general.css" />
+  <link rel="stylesheet" href="calc-general-m1.css" />
+  <link rel="stylesheet" href="calc-general-m2.css" />
+</div>
