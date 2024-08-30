@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", async function () {
+  if (window.location.href.includes("careid.center")) {
+    const dummyDiv = document.getElementById("dummy-div");
+    dummyDiv.style.display = "block";
+    const calcSubjectElements = document.getElementById("main-logo");
+    calcSubjectElements.style.display = "none";
+  } else {
+    const dummyDiv = document.getElementById("dummy-div");
+    dummyDiv.style.display = "none";
+  }
+
   let sk_name = null;
   let sk_author = null;
   let sk_maxPage = null;
@@ -336,6 +346,23 @@ document.addEventListener("DOMContentLoaded", async function () {
           responseData.maintaince.toFixed(2);
         document.getElementById("retire-amount-kg").innerText =
           responseData.retire.toFixed(2);
+
+        document.getElementById("mb1v").style.width =
+          responseData.manufacturing_ratio;
+        document.getElementById("mb2v").style.width =
+          responseData.transport_ratio;
+        document.getElementById("mb3v").style.width =
+          responseData.maintaince_ratio;
+        document.getElementById("mb4v").style.width = responseData.retire_ratio;
+
+        document.getElementById("mbp1t").innerText =
+          responseData.manufacturing_ratio;
+        document.getElementById("mbp2t").innerText =
+          responseData.transport_ratio;
+        document.getElementById("mbp3t").innerText =
+          responseData.maintaince_ratio;
+        document.getElementById("mbp4t").innerText = responseData.retire_ratio;
+
         // 2번 라인 변경
         document.getElementById("vg-manufacturing").style.height =
           responseData.manufacturing_ratio;
@@ -368,6 +395,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           responseData.manufacturing_ratio;
         document.querySelector(".manufacturing-items").innerHTML = "";
         for (let i = 0; i < responseData.materials.length; i++) {
+          console.log(responseData.materials[i]);
           let targetContainer = document.querySelector(".manufacturing-items");
           targetContainer.innerHTML += `
             <div class="manufacturing-item">

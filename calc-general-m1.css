@@ -74,6 +74,9 @@
     margin-left: 36px;
     margin-bottom: 30px;
   }
+  .calc-input-name {
+    min-height: 100px;
+  }
   .calc-input-name > input {
     padding: 40px 24px;
     border-radius: 10px;
@@ -501,6 +504,9 @@
     font-weight: 700;
     height: 110px;
   }
+  .calc-archive {
+    position: relative;
+  }
   .archive-text > div:nth-child(1) {
     font-size: 26px;
   }
@@ -524,18 +530,26 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    padding-bottom: 400px;
   }
   .archive-item {
     height: 300px;
   }
   .archive-pagenation {
-    bottom: 20px;
+    bottom: -650px;
     gap: 50px;
     font-size: 28px;
+  }
+  .modal-content {
+    width: 70%;
   }
   .modal-auth-content {
     height: 360px;
     margin: 40% auto;
+  }
+  .modal-guide-text {
+    font-size: 30px;
+    text-align: left;
   }
   .modal-input {
     display: flex;

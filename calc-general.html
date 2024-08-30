@@ -8,13 +8,17 @@
   />
   <!--1. calc subject-->
   <div class="calc-subject">
-    <img src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/logo.png" />
+    <div id="dummy-div"></div>
+    <img
+      src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/logo.png"
+      id="main-logo"
+    />
     <div>
       <!-- <div class="btn-archive" id="btn-archive">
         <div>CALCULATOR-ARCHIVE</div>
       </div> -->
       <div class="btn-more" id="btn-archive">
-        <div>CALCULATOR-ARCHIVE</div>
+        <div>계산 결과 데이터베이스</div>
         <img
           src="https://careid.s3.ap-northeast-2.amazonaws.com/icons/arrow-up-dark.svg"
         />
@@ -49,14 +53,15 @@
       type="text"
       placeholder="Ex) My Blue shirt"
       id="input-project-name"
+      maxlength="30"
     />
     <div class="text-warning" id="text-warning">
       올바른 제품명을 입력해주세요. Please input valiable text.
     </div>
-    <div class="guide-text">
+    <!-- <div class="guide-text">
       * 본 계산기는 현재 PC버전만 운영되고 있습니다. This calculator only works
       on PC.
-    </div>
+    </div> -->
   </div>
   <!--4. calc-input-category-->
   <div class="calc-input-category" id="calc-input-category">
@@ -248,7 +253,7 @@
             name="category"
             value="bootslong"
           />
-          <label for="boots-long">롱부츠 (Boots-long)</label>
+          <label for="bootslong">롱부츠 (Boots-long)</label>
         </div>
         <div class="class-select">
           <input
@@ -956,7 +961,7 @@
             <div>디젤 밀도<br />Diesel Density</div>
             <div id="diesel-density">0.838 Kg / Liters</div>
           </div>
-          <div>
+          <div style="border-bottom: none">
             <div>전기<br />Electricity</div>
             <div id="electricity-car">0.522 KgCo<sub>2</sub>e/kwh</div>
           </div>
@@ -1003,7 +1008,7 @@
         <div>
           <div>1회 세탁 탄소 발생량</div>
           <div>Carbon amount<br />per washing once (kgCo2e)</div>
-          <div id="washing-carbon" style="font-size: 27px">0.375</div>
+          <div id="washing-carbon">0.375</div>
         </div>
       </div>
     </div>
@@ -1044,17 +1049,17 @@
           </div>
         </div>
         <div>
-          <div>폐기 탄소발생량</div>
+          <div>폐기 탄소 발생량</div>
           <div>Amount of discarded carbon generated</div>
           <div id="carbon-retire">2.6 KgCo2e</div>
         </div>
         <div>
-          <div>재활용 탄소발생량</div>
+          <div>재활용 탄소 발생량</div>
           <div>Amount of recycled carbon generated</div>
           <div id="carbon-recycle">2.6 KgCo2e</div>
         </div>
         <div>
-          <div>재활용 폐기 비교절감량</div>
+          <div>재활용 폐기 비교 절감량</div>
           <div>Benefits if recycle</div>
           <div style="display: flex; flex-direction: column">
             <div id="carbon-recycle-benefit">2.6 KgCo2e</div>
@@ -1186,6 +1191,10 @@
   <!--11. calc-modals-->
   <div id="modal" class="modal">
     <div class="modal-content">
+      <div class="modal-guide-text">
+        계산 정보는 화면 좌측 상단 "계산 결과 데이터베이스"를 통해 열람 할 수
+        있습니다.
+      </div>
       <div class="modal-input">
         <div>작성자<br />Author</div>
         <input type="text" name="author" maxlength="40" id="calc-author" />

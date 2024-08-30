@@ -52,6 +52,7 @@
   .calc-input-name {
     gap: 0px;
     padding-top: 10px;
+    min-height: 100px;
   }
   .calc-input-name > input {
     padding: 15px 10px;
@@ -303,6 +304,9 @@
     width: 100%;
     gap: 10px;
   }
+  .vg {
+    background-color: #f1f1f1;
+  }
   .total-carbon {
     width: auto;
     flex: 1 1;
@@ -315,38 +319,397 @@
     text-align: left;
     font-size: 20px;
   }
+
+  .horizontal-bar {
+    display: none;
+  }
+
   .horizontal-bar-m {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
+
   .bar-manufacturing-m {
     width: 100%;
     height: 30px;
-    background-color: #b1b1b1;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 0px 5px 5px 0px;
   }
   .bar-manufacturing-m > div:nth-child(1) {
-    width: 100%;
-    height: 30px;
-    background-color: #b1b1b1;
+    height: 100%;
+    background-color: #41d98d;
+    border-radius: 0px 5px 5px 0px;
   }
   .bar-manufacturing-m > div:nth-child(2) {
     font-size: 12px;
   }
+
   .bar-transport-m {
     width: 100%;
     height: 30px;
-    background-color: #b1b1b1;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 0px 5px 5px 0px;
   }
+  .bar-transport-m > div:nth-child(1) {
+    height: 100%;
+    background-color: rgba(61, 156, 109, 0.57);
+    border-radius: 0px 5px 5px 0px;
+  }
+  .bar-transport-m > div:nth-child(2) {
+    font-size: 12px;
+  }
+
   .bar-maintaince-m {
-    width: 100%;
     height: 30px;
-    background-color: #b1b1b1;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 0px 5px 5px 0px;
   }
+  .bar-maintaince-m > div:nth-child(1) {
+    height: 100%;
+    background-color: rgba(152, 232, 192, 0.68);
+    border-radius: 0px 5px 5px 0px;
+  }
+  .bar-maintaince-m > div:nth-child(2) {
+    font-size: 12px;
+  }
+
   .bar-retire-m {
     width: 100%;
-    background-color: #b1b1b1;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 0px 5px 5px 0px;
+  }
+  .bar-retire-m > div:nth-child(1) {
+    height: 100%;
+    background-color: rgba(65, 217, 141, 0.19);
+    border-radius: 0px 5px 5px 0px;
+  }
+  .bar-retire-m > div:nth-child(2) {
+    font-size: 12px;
+  }
+  .graph-vertical {
+    padding: 0px;
+  }
+  .graph-section {
+    gap: 10px;
+  }
+  .section-item > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    height: 34px;
+  }
+  .vg {
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .vg-value {
+    border-radius: 5px 5px 0px 0px;
+  }
+  .graph-quantified {
+    gap: 10px;
+  }
+  .graph-quantified > div:nth-child(1) {
+    font-size: 15px;
+  }
+  .graph-quantified > div:nth-child(2) {
+    font-size: 12px;
+  }
+  .section-title {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .result-sub-title {
+    font-size: 18px;
+    gap: 10px;
+    padding: 0px;
+  }
+  .result-sub-title-en {
+    font-size: 16px;
+  }
+  .result-percentage {
+    gap: 10px;
+  }
+  .result-percentage > div:nth-child(1) {
+    font-size: 24px;
+  }
+  .result-percentage > div:nth-child(2) {
+    font-size: 30px;
+  }
+
+  .result-manufacturing {
+    padding: 0px;
+  }
+  .manufacturing-item {
+    padding: 15px;
+    gap: 5px;
+  }
+  .manufacturing-item > div:nth-child(1) {
+    font-size: 24px;
+  }
+  .manufacturing-item > div:nth-child(2) {
+    font-size: 16px;
+  }
+  .material-detail {
+    margin-top: 5px;
+  }
+  .material-detail > div:nth-child(1) {
+    font-size: 14px;
+  }
+  .material-detail > .material-detail-percent {
+    font-size: 30px;
+  }
+  .material-detail > .material-detail-kg {
+    font-size: 23px;
+  }
+  .result-sub-title-info {
+    font-size: 12px;
+    padding-left: 0px;
+  }
+  .result-transport {
+    padding: 0px;
+    gap: 10px;
+  }
+  .transport-board {
+    gap: 10px;
+  }
+  .transport-map {
+    margin-top: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .map-node {
+    height: auto;
+    padding: 5px;
+  }
+  .transport-arrow {
+    display: none;
+  }
+  .map-node {
+    flex: 0 0 33%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .map-node > img {
+    width: 30px;
+    height: 30px;
+  }
+  .map-node > div:nth-child(2) {
+    font-size: 14px;
+  }
+  .map-node > div:nth-child(3) {
+    font-size: 12px;
+  }
+  .transport-details {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .transport-details > div {
+    height: 80px;
+    border-bottom: 1px solid black;
+  }
+  .transport-details > div > div:nth-child(1) {
+    font-size: 14px;
+  }
+  .transport-details > div > div:nth-child(2) {
+    font-size: 22px;
+  }
+  .result-maintaince {
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  .maintaince-items > div {
+    padding: 10px;
+  }
+  .maintaince-items > div > div:nth-child(1) {
+    font-size: 14px;
+  }
+  .maintaince-items > div > div:nth-child(2) {
+    font-size: 12px;
+  }
+  .maintaince-items > div > div:nth-child(3) {
+    font-size: 16px;
+  }
+  #washing-carbon {
+    font-size: 13px;
+  }
+  .result-retire {
+    padding: 0px;
+    width: 100%;
+    gap: 10px;
+  }
+  .carbon-additional-info {
+    height: 14px;
+    width: 14px;
+  }
+  .retire-items {
+    padding: 0px;
+  }
+  .retire-items > div {
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    height: 140px;
+  }
+  .retire-items > div > div:nth-child(1) {
+    font-size: 12px;
+  }
+  .retire-items > div > div:nth-child(2) {
+    font-size: 12px;
+  }
+  .retire-items > div > div:nth-child(3) {
+    font-size: 12px;
+  }
+  #carbon-recycle-benefit {
+    font-size: 12px;
+  }
+  #ratio-recycle-benefit {
+    font-size: 28px;
+  }
+  #info-text {
+    font-size: 12px;
+    padding: 10px;
+    right: 0px;
+  }
+
+  .result-comparison {
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .result-comparison > div {
+    padding-bottom: 30px;
+    gap: 6px;
+  }
+  .result-comparison > div > img {
+    height: 60px;
+    width: 60px;
+  }
+  .result-comparison > div > div:nth-child(2) {
+    font-size: 18px;
+  }
+  .result-comparison > div > div:nth-child(3) {
+    font-size: 14px;
+  }
+  .result-comparison > div > div:nth-child(4) {
+    font-size: 22px;
+    height: 50px;
+  }
+  .calc-archive {
+    padding-bottom: 100px;
+  }
+  .archive-text > div:nth-child(1) {
+    font-size: 14px;
+  }
+  .archive-text > div:nth-child(2) {
+    font-size: 12px;
+  }
+  .archive-header > input {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .archive-header > img {
+    height: 18px;
+    width: 18px;
+    padding: 5px;
+  }
+  .archive-content {
+    gap: 10px;
+    padding-bottom: 140px;
+  }
+  .archive-item {
+    height: 220px;
+  }
+  .archive-top {
+    padding: 15px;
+  }
+  .archive-no {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .archive-name {
+    font-size: 18px;
+  }
+  .archive-category {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .archive-bottom {
+    padding: 15px;
+    flex-direction: column;
+  }
+  .archive-date {
+    font-size: 12px;
+  }
+  .archive-author {
+    font-size: 14px;
+  }
+  .archive-pagenation {
+    bottom: -75px;
+    gap: 50px;
+    font-size: 18px;
+  }
+  .archive-carbon {
+    font-size: 20px;
+  }
+  .archive-carbon > div:nth-child(2) {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 60%;
+    gap: 10px;
+  }
+  .modal-guide-text {
+    font-size: 18px;
+    text-align: left;
+  }
+  .modal-input > div {
+    font-size: 18px;
+  }
+  .modal-input > input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .modal-auth-content {
+    width: 70%;
+    height: 300px;
+  }
+  .modal-auth-control > #auth-cancel-btn {
+    font-size: 18px;
+  }
+  .modal-auth-control > #auth-delete-btn {
+    font-size: 18px;
+  }
+  .modal-auth-control > #auth-confirm-btn {
+    font-size: 18px;
   }
 
   /* 버튼 부문*/
